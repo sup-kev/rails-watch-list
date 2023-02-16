@@ -1,0 +1,7 @@
+<h1>Show all movies</h1>
+<ul>
+  <% @movies.each do |movie|%>
+    <li><%= link_to movie.name, movie_path(movie) %></li>
+  <% end %>
+  <p><%= link_to '➕', lists_path %></p>
+</ul>
