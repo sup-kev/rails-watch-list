@@ -1,9 +1,9 @@
 <div>
   <h1>Show all movies</h1>
-
   <ul>
     <%= @list.name%>
   </ul>
   <%= link_to "Add a new bookmark 📖", new_list_bookmark_path(@list), class:"btn btn-success" %>
     <%= link_to "Back to your lists", lists_path, class:"btn btn-primary"%>
+    <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
 </div>

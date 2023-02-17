@@ -2,13 +2,13 @@
     <h1></strong>Watch a movie</h1>
 </div>
 
-<div class = "navbar-lewagon">
+
   <h1 class = "movie-color">Movie Index 🤙🏻</h1>
-  <ul>
+  <div class="cards">
     <% @lists.each do |list| %>
-      <li><%= link_to list.name, list_path(list)
-  %></li>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url( <%= list.photo.attached? ? cl_image_path(list.photo.key) : 'https://picsum.photos/200/300' %>)">
+        <%= link_to list.name, list_path(list) %>
+      </div>
     <% end %>
-  </ul>
 </div>
 <%= link_to "Add a new list 🎮", new_list_path, class:"btn btn-success" %>
