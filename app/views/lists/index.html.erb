@@ -1,6 +1,14 @@
-<h1>Index</h1>
-<ul>
-  <% @lists.each do |list| %>
-    <li><%= list.name %></li>
-  <% end %>
-</ul>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://png.pngtree.com/background/20210710/original/pngtree-movie-ticket-cinema-promotion-banner-picture-image_1050764.jpg);">
+    <h1></strong>Watch a movie</h1>
+</div>
+
+<div class = "navbar-lewagon">
+  <h1 class = "movie-color">Movie Index 🤙🏻</h1>
+  <ul>
+    <% @lists.each do |list| %>
+      <li><%= link_to list.name, list_path(list)
+  %></li>
+    <% end %>
+  </ul>
+</div>
+<%= link_to "Add a new list 🎮", new_list_path, class:"btn btn-success" %>
