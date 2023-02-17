@@ -1,11 +1,8 @@
 <div>
   <h1>Show all movies</h1>
-  
+
   <ul>
-    <% @lists.each do |list|%>
-      <li><%= link_to list.name, list_path(list) %></li>
-    <% end %>
-    <p><%= link_to '➕.fs-2 text', new_list_path %></p>
+    <%= @list.name%>
   </ul>
   <%= link_to "Add a new bookmark 📖", new_list_bookmark_path(@list), class:"btn btn-success" %>
     <%= link_to "Back to your lists", lists_path, class:"btn btn-primary"%>
